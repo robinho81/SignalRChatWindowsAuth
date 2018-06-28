@@ -1,0 +1,34 @@
+﻿@page
+@model SignalRChatWindowsAuth.Pages.ChatModel
+@{
+    ViewData["Title"] = "Chat";
+    Layout = "~/Pages/_Layout.cshtml";
+}
+<h2>Chat</h2>
+<div class="container">
+  <div class="row">&nbsp;</div>
+  <div class="row">
+    <div class="col-6">&nbsp;</div>
+    <div class="col-6">
+      User..........<input type="text" id="userInput" readonly value="@Model.Username" />
+      <br />
+      Message...<input type="text" id="messageInput" />
+      <input type="button" id="sendButton" value="Send Message" />
+      OR... <input type="button" id="sendToMeButton" value="Send To Me" />
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12">
+      <hr />
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-6">&nbsp;</div>
+    <div class="col-6">
+      <ul id="messagesList"></ul>
+    </div>
+  </div>
+</div>
+<script src="~/lib/signalr/signalr.js"></script>    
+<script src="~/js/chat.js"></script>
+@*<script src="~/js/es5-chat.js"></script>*@
